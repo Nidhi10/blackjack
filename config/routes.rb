@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-
+ 
   devise_for :players
   resources :games, only: [:index, :show, :new, :create] do
     resources :moves, only: [:show, :update, :index]
