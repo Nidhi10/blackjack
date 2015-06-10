@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  move_id: 
+  card_id: 
+
+two:
+  move_id: 
+  card_id: 

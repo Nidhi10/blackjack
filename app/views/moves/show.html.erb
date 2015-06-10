@@ -1,0 +1,14 @@
+<div class="container">
+  <h4>Your turn! You got <%= @move.points %> points</h4>
+  <br />
+
+  <%= form_for @move, url: game_move_path(@move.game_id, @move) do |f| %>
+    <%= f.hidden_field :status, value: 'hit' %>
+    <%= f.submit 'Hit', class: 'btn btn-primary'  %>
+  <% end %>
+  <p>&nbsp; or &nbsp; </p>
+  <%= form_for @move, url: game_move_path(@move.game_id, @move) do |f| %>
+    <%= f.hidden_field :status, value: 'stand' %>
+    <%= f.submit 'Stand',class: 'btn btn-primary'  %>
+  <% end %>
+</div>

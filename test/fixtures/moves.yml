@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game_id: 
+  player_id: 
+  first_card_id: 
+  second_card_id: 
+
+two:
+  game_id: 
+  player_id: 
+  first_card_id: 
+  second_card_id: 

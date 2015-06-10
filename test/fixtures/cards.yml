@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: MyString
+  points: 1
+  deck: 1
+
+two:
+  number: MyString
+  points: 1
+  deck: 1

@@ -1,0 +1,26 @@
+<div class = "container" >
+  <h3>Hi <%= @game.player_name %>, place a bet</h3>
+  <%= form_for(@game, html: {class: 'form-inline'}) do |f| %>
+
+    <% if @game.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@game.errors.count, 'error') %> prohibited this order from being saved:</h2>
+
+        <ul>
+          <% @game.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :bet, class: 'sr-only' %><br>
+      <%= f.text_field :bet, class: 'form-control', placeholder: 'Amount' %>
+      <%= f.submit 'Start Game', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
+
+
+

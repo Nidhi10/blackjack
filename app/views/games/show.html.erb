@@ -1,0 +1,12 @@
+<div class = "container" >
+  <h2>Score Card</h2>
+  <% if @game.finished? %>
+      <p>Game Over!, <%= @game.winner_name %> won Rs. <%= @game.bet %>. with total score of <%= @game.winner_name.eql?('Dealer') ? @system_points : @my_points %></p>
+  <% else %>
+      <p><%= @game.player_name  %>, you are currently at: <%= @my_points %> points</p>
+      <% if defined? @system_points %>
+          <p>Dealer is at <%= @system_points %></p>
+      <% end %>
+  <% end %>
+  <%= link_to 'See moves', game_moves_path(@game) %>
+</div>

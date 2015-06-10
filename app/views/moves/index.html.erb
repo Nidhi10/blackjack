@@ -1,0 +1,27 @@
+<div class = "container" >
+  <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Player</th>
+        <th>Cards</th>
+        <th></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @moves.each do |move| %>
+        <tr>
+          <td><%= move.player_name %></td>
+          <td>
+            <% move.cards.each do |card| %>
+              <p><%= "Card '#{card.number}' for #{card.points} points" %></p>
+            <% end %>
+          <td>
+            <% if move.status.blank? && !@game.finished? && move.player_id == current_player.id %>
+               <%= link_to 'Hit or Stand?', game_move_path(@game, move) %></td>
+            <% end %>
+        </tr>
+      <% end %>
+      </tbody>
+  </table>
+</div>

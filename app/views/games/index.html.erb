@@ -1,0 +1,23 @@
+<div class = "container" >
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Bet</th>
+      <th></th>
+      <th>Winner</th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td><%= game.bet %></td>
+        <td></td>
+        <td><%= game.finished? ? game.winner_name : 'Unfinished' %></td>
+        <td><%= link_to 'See Moves', game_moves_path(game) %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
